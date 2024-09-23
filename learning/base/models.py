@@ -39,6 +39,7 @@ class Message(models.Model):
 # used this form and created a view for it and also handled the post of this methods!
 # url for handling update_room, then created a view for it and also handled the post of this methods!
 # also get to know how to update data having filled with previous state of the data!
+# also created a delete form for the room and the redirect back to the rooms page !
 
 class Topic(models.Model):
     name = models.CharField(max_length=200)

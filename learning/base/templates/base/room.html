@@ -21,6 +21,9 @@
 <strong>-----</strong>
 {% endif %}
 <a href="{% url 'update_room' room.id %}">EDIT</a>
+
+<a href="{% url 'delete_room' room.id %}">DELETE</a>
+
     
     <hr />
 {% endfor %}
