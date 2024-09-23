@@ -5,12 +5,24 @@
 
 
 <div>
-{{boos}}
-{{room}}
+    <h1>Rooms Page</h1>
 
+    <b>
+        <a href="/room/create_room">New Room</a>
+    </b>
+    <br />
 
 {% for room in rooms  %}
-    <a href="/room/{{room.id}}">{{room.id}} - {{room.name}}</a>
+    <a href="/room/{{room.id}}">{{room.id}}</a>
+<strong>{{room.name}}</strong>
+
+{% if room.host.username %}
+<b><i>@{{room.host.username}}</i></b> 
+<strong>-----</strong>
+{% endif %}
+<a href="{% url 'update_room' room.id %}">EDIT</a>
+    
+    <hr />
 {% endfor %}
 
 </div>
